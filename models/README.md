@@ -26,26 +26,26 @@ and for *DPRReader* as:
 model = DPRReader(DPRConfig(**BertConfig.get_config_dict("gdario/biobert_bioasq")[0]))
 `
 
-*convert_dpr_original_checkpoint_to_pytorch.py* script is already changed in the above-mentioned way.
+*checkpoint_convert.py* script is already changed in the above-mentioned way.
 
 ## Running scripts for conversion
 
 After editing the script in the above-mentioned way, we need to run three scripts to first convert *ctx_encoder*:
 
 ```
-python convert_dpr_original_checkpoint_to_pytorch.py --type ctx_encoder --src pipeline1_baseline/cp_models/dpr_biencoder.29 --dest SleepQA/models/pytorch/ctx_encoder
+python checkpoint_convert.py --type ctx_encoder --src pipeline1_baseline/cp_models/dpr_biencoder.29 --dest SleepQA/models/pytorch/ctx_encoder
 ```
 
 then *question_encoder*:
 
 ```
-python convert_dpr_original_checkpoint_to_pytorch.py --type question_encoder --src pipeline1_baseline/cp_models/dpr_biencoder.29 --dest SleepQA/models/pytorch/question_encoder
+python checkpoint_convert.py --type question_encoder --src pipeline1_baseline/cp_models/dpr_biencoder.29 --dest SleepQA/models/pytorch/question_encoder
 ```
 
 and finally *reader*:
 
 ```
-python convert_dpr_original_checkpoint_to_pytorch.py --type reader --src pipeline1_baseline/cp_models/dpr_extractive_reader.1.250 --dest SleepQA/models/pytorch/reader
+python checkpoint_convert.py --type reader --src pipeline1_baseline/cp_models/dpr_extractive_reader.1.250 --dest SleepQA/models/pytorch/reader
 ```
 
 ## Adding missing files after the conversion

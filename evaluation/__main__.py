@@ -1,10 +1,11 @@
 from indexes import prepare_json, create_indexes
-from auto_eval import *
-from human_eval import *
+from inter_agreement import labels_agreement
+from eval import *
+
 
 
 if __name__ == "__main__":
-    
+    agreement_file = "../data/agreement/labels_agreement.csv"
     text_corpus = "../data/training/sleep-corpus.tsv"
     # needs absolute path!
     json_folder = "/4TB/guest1/github/SleepQA/data/bm25_json/"
@@ -28,6 +29,8 @@ if __name__ == "__main__":
     
     consensus_file = "../data/agreement/model_agreement.csv"
   
+    labels_agreement(agreement_file)
+
     # create json
     prepare_json(text_corpus, json_folder)
     

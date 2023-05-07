@@ -3,7 +3,7 @@
 2. Fine-tune the six domain-specific BERT models (see training code section)
 3. Anlyze and choose the best performing models for the reader model and retrieval model (PubMedBERT + BioBERT BioASQ).
 4. Perform intrinsic evaluation using the code in the SleepQA_Reproduction/evaluation folder.
-5. Perform extrinsic evaluation using the code in the SleepQA_Reproduction/evaluation folder and SleepQA_Reproduction/evaluation/utils folder.
+5. Perform extrinsic evaluation using the code in the SleepQA_Reproduction/evaluation folder.
 
 
 
@@ -36,7 +36,6 @@ https://github.com/IvaBojic/SleepQA
         "transformers",
         "pandas",
         "nltk.tokenize",
-        "f1_score",
         "argparse",
         "pathlib",
         "seaborn",
